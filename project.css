@@ -1,0 +1,103 @@
+:root {
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  text-align: left;
+  background-color: #fff;
+}
+
+.container {
+  display: grid;
+  gap: 16px;
+  max-width: 1200px; /* max-w-5xl */
+  margin: auto;
+  padding: 10px 16px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr); /* Adjust based on screen size below */
+  gap: 16px; /* gap-4 */
+  max-width: 1200px; /* max-w-5xl */
+  margin: auto;
+  padding: 10px 16px;
+}
+
+.aspect-video {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px; /* rounded-lg */
+  padding-top: 56.25%; /* aspect ratio of 16:9 */
+}
+
+.aspect-video img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr); /* md:grid-cols-2 */
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* lg:grid-cols-3 */
+  }
+}
+
+.myHeading {
+  font-size: 30px;
+  margin-bottom: 0px;
+  color: #3264ff;
+  position: relative; /* Required for pseudo-element positioning */
+  display: inline-block; /* Ensures the border-bottom only spans the text width */
+  margin-bottom: 5px;
+}
+
+.myHeading::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px; /* Thickness of the underline */
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    #3264ff 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  position: absolute;
+  bottom: -5px; /* Distance from the text to the underline */
+  left: 0;
+  border-radius: 2px; /* Optional: Adds rounded corners to the underline */
+}
+
+.smallCont {
+  text-align: center;
+}
+.logo {
+  width: 60px !important;
+}
