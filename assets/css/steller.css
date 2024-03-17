@@ -11526,11 +11526,13 @@ pre {
   color: #4f9fff;
 }
 
-.img-wrapper:hover .overlay,
-.img-wrapper:active .overlay {
-  bottom: 0;
-  visibility: visible;
-  opacity: 1;
+@media (min-width: 576px) {
+  .img-wrapper:hover .overlay,
+  .img-wrapper:active .overlay {
+    bottom: 0;
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .img-wrapper:hover .overlay .overlay-infos,
@@ -12062,3 +12064,29 @@ pre {
   gap: 30px;
   font-size: 30px;
 }
+
+.portfolio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  flex-wrap: wrap;
+}
+
+.portfolio-category {
+  width: 47%;
+}
+
+.sm-heading {
+  display: none;
+  font-size: 0.75rem;
+  text-align: start;
+}
+
+@media (max-width: 576px) {
+  .sm-heading {
+    display: block;
+  }
+}
+
+

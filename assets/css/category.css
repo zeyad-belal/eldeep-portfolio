@@ -25,10 +25,13 @@ body {
 }
 
 .container {
-  display: grid;
-  gap: 16px;
-  max-width: 900px;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5%;
+
+  margin: 0 auto;
+  width: fit-content;
   padding: 10px 16px;
 }
 
@@ -38,16 +41,12 @@ body {
   margin-bottom: 8px;
 }
 
-.grid {
-  display: flex;
-  justify-content: start;
-  gap: 16px;
-}
-
 .card {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 5px;
+  width: 35%;
+  margin-bottom: 20px;
 }
 
 .card img {
@@ -85,4 +84,13 @@ body {
 
 .logo {
   width: 60px !important;
+}
+
+.myNav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 0.75rem;
+  margin: 20px 10%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.11);
 }
